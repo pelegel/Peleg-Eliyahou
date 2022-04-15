@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,29 @@
     <title>Document</title>
     <style>
         body {
-          background-image: url('../static/pinkFlowers.jpg');
-          margin: 50px;
-          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-image: url('../static/background.jfif');
+            margin: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
     </style>
 </head>
 
 <body>
-    
-    <div style="border: 7px solid rgb(245, 173, 209); padding: 15px; margin: 20px; text-align: center; background-image: url('../static/image.jpg');">
+
+    <div
+        style="border: 7px solid lightsteelblue; padding: 15px; margin: 20px; text-align: center; background-image: url('../static/pinkBackground.webp');">
         <h1>My First Website</h1>
     </div>
     <br><br>
-    <span style="padding: 15px; margin: 20px; font-size: 150%; ">
+    <p>
+        <img src="../static/welcome.jpg" alt="Welcome" style="float:right;width:350px; border:5px double purple;">
+    </p>
+
+    <span style="margin: 20px; font-size: 150%; ">
         This is Peleg's first homework in web course
     </span><br><br><br>
-
+    
+  
     <span style="padding: 30px; ">
         Do you want to stay in contact?
     </span><br>
@@ -31,7 +38,20 @@
         <ul>
             <li> <a href="Contact.HTML">Contact</a></li>
         </ul>
-    </nav>
+    </nav><br><br>
+
+    <span style="padding: 15px; margin: 20px">
+        Enjoy the music while you're in here :)
+    </span><br><br>
+
+    <audio controls autoplay>
+
+        <source src="../static/Let Me Love You Instrument.mp3" type="audio/mp3">
+
+        Your browser does not support the audio element.
+
+    </audio>
 
 </body>
+
 </html>
