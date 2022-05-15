@@ -2,6 +2,11 @@
     --lightPurple:  rgb(160, 6, 237);
     --fucciaPink: rgb(255, 4, 129);
 }
+/*web font*/
+@font-face {
+    font-family: MyFirstFont;
+    src: url(../static/GrapeNuts-Regular.ttf);
+}
 
 body {
     background-image: url("../static/background.jfif");
@@ -21,6 +26,7 @@ label {
 }
 
 
+/* navigation bar design*/
 nav a {
     color:blue;
     display: inline;
@@ -38,34 +44,32 @@ a:hover {
     transform: scale(2,2);
 }
 
-@font-face {
-    font-family: MyFirstFont;
-    src: url(../static/GrapeNuts-Regular.ttf);
-}
-
 .active {
     background-color: lightsteelblue;
     color: black;
-
 }
 
 li {
     display: inline;
 }
+/*end navigation bar design*/
 
 
+
+
+
+/*grid areas - home */
 #Nav {
     grid-area: Nav;
 }
 
-#nav {
-    grid-area: nav;
-}
-
-#formDiv {
-    color: black;
-    grid-area: formDiv;
-    margin: 20px;
+#HeaderH {
+    border: 7px solid lightsteelblue; 
+    padding: 15px; 
+    margin: 20px; 
+    text-align: center; 
+    background-image: url('../static/pinkBackground.webp');
+    grid-area: HeaderH;
 }
 
 #audio {
@@ -89,25 +93,6 @@ li {
 }
 
 
-#HeaderC {
-    border: 7px solid lightsteelblue; 
-    padding: 15px; 
-    margin: 20px; 
-    text-align: center; 
-    background-image: url('../static/pinkBackground.webp');
-    grid-area: HeaderC;
-}
-
-#HeaderH {
-    border: 7px solid lightsteelblue; 
-    padding: 15px; 
-    margin: 20px; 
-    text-align: center; 
-    background-image: url('../static/pinkBackground.webp');
-    grid-area: HeaderH;
-
-}
-
 #switchingPics {
     grid-area: switchingPics;
 }
@@ -119,17 +104,46 @@ li {
     font-size: 150%;
     font-weight: bold;
 }
+ /*end grid areas - home*/
+
+
+
+
+/*grid areas - Contact */
+#nav {
+    grid-area: nav;
+}
+
+
+#formDiv {
+    color: black;
+    grid-area: formDiv;
+    margin: 20px;
+}
+
+
+#HeaderC {
+    border: 7px solid lightsteelblue; 
+    padding: 15px; 
+    margin: 20px; 
+    text-align: center; 
+    background-image: url('../static/pinkBackground.webp');
+    grid-area: HeaderC;
+}
+
 
 #titleCont {
     grid-area: titleCont;
 }
-
-#pic {
-    animation: switchingImages 4s ease-in-out 0.5s 5;
-}
+ /*end grid areas - contact*/
 
 
 
+
+
+
+
+/*Grids*/
 #containerHome {
     display: grid;
     grid-template-areas: 
@@ -187,9 +201,11 @@ li {
     }
     
 }
+ /*end grids*/
 
 
 
+/*animation*/
 .img1 {
     animation: fadeIn1 ease 10s;
     animation: fadeIn1 2s infinite;
@@ -210,3 +226,8 @@ li {
     66% {opacity:0.5;}
     100% {opacity:0;}
 }
+
+#pic {
+    animation: switchingImages 4s ease-in-out 0.5s 5;
+}
+ /*end animation*/

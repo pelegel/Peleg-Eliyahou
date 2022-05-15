@@ -18,6 +18,8 @@
             <h1>Contact Us</h1>
         </header>
         <br>
+
+        <!-- Navigation bar -->
         <nav id="nav">
             <ul>
                 <li> <a href="Home.HTML">Home</a></li>
@@ -27,45 +29,55 @@
         <br>
 
 
-        <p id="titleCont" style="font-size: 150%; margin: 20px;">
+        <p id="titleCont" class="title">
             We would like to keep in contact with you!
         </p><br><br>
 
+
+        <!-- Contact form -->
         <div id="formDiv">
             <form action="URL" method="post">
+                <!-- name -->
                 <label for="FullName">Full Name</label>
                 <input type="text" id="FullName" name="FullName" autocomplete="on" required><br><br>
 
+                <!-- email -->
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="email" id="email" name="email" required><br><br>       
 
+                <!-- phone number -->
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{7}"><br><br>
 
+                <!-- gender -->
                 <label for="gender">Gender</label><br>
                 <input type="radio" id="male" name="gender" value="Male">
                 <label for="male">Male</label><br>
                 <input type="radio" id="female" name="gender" value="Female">
                 <label for="female">Female</label><br><br>
 
+                <!-- birthday -->
                 <label for="birthdate">Birthdate</label>
                 <input type="date" id="birthdate" name="birthdate" max="2022-04-17"><br><br>
 
+                <!-- rate -->
                 <label for="range">Please Rate Us</label>
                 <input type="range" id="range" name="range" min="0" max="10"><br><br>
 
+                <!-- message -->
                 <label for="text">What do you want to tell us?</label>
                 <input type="text" id="text" name="text" style="padding: 25px;" required><br><br>
 
+                <!-- agree to promotions -->
                 <label for="agree">I agree to send me promotion emails</label>
                 <input type="checkbox" id="agree" name="agree"><br><br>
 
             </form><br>
 
-            <button id="btnSubmit" onclick="submit()">Calculate</button><br>
+            <!-- submit form button -->
+            <button id="btnSubmit" onclick="submit()">Submit</button><br>
 
         </div>
-
 
     </div>
 </body>
