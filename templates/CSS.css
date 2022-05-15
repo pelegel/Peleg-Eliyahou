@@ -1,0 +1,212 @@
+:root {
+    --lightPurple:  rgb(160, 6, 237);
+    --fucciaPink: rgb(255, 4, 129);
+}
+
+body {
+    background-image: url("../static/background.jfif");
+    font-family: MyFirstFont;
+    margin: 50px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+nav a {
+    color:blue;
+    display: inline;
+    font-size: 20px;
+    border: 3px solid lightsteelblue;
+}
+
+a:link {
+    color: black;
+}
+
+
+a:hover {
+    color: var(--fucciaPink);
+    transform: scale(2,2);
+}
+
+@font-face {
+    font-family: MyFirstFont;
+    src: url(../static/GrapeNuts-Regular.ttf);
+}
+
+.active {
+    background-color: lightsteelblue;
+    color: black;
+
+}
+
+li {
+    display: inline;
+}
+
+
+#Nav {
+    grid-area: Nav;
+}
+
+#nav {
+    grid-area: nav;
+}
+
+#formDiv {
+    color: black;
+    grid-area: formDiv;
+    margin: 20px;
+}
+
+#audio {
+    grid-area: audio;
+}
+
+#enjoy {
+    grid-area: enjoy;
+    margin: 20px;
+}
+
+#calcTime {
+    grid-area: calcTime;
+    margin: 20px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+#calcTitle {
+    font-weight: bold;
+}
+
+
+#HeaderC {
+    border: 7px solid lightsteelblue; 
+    padding: 15px; 
+    margin: 20px; 
+    text-align: center; 
+    background-image: url('../static/pinkBackground.webp');
+    grid-area: HeaderC;
+}
+
+#HeaderH {
+    border: 7px solid lightsteelblue; 
+    padding: 15px; 
+    margin: 20px; 
+    text-align: center; 
+    background-image: url('../static/pinkBackground.webp');
+    grid-area: HeaderH;
+
+}
+
+#switchingPics {
+    grid-area: switchingPics;
+}
+
+
+#Welcome {
+    grid-area: Welcome;
+    margin: 20px; 
+    font-size: 150%;
+    font-weight: bold;
+}
+
+#titleCont {
+    grid-area: titleCont;
+}
+
+#pic {
+    animation: switchingImages 4s ease-in-out 0.5s 5;
+}
+
+
+
+#containerHome {
+    display: grid;
+    grid-template-areas: 
+    'HeaderH HeaderH HeaderH '
+    'Nav Nav Nav '
+    'Welcome calcTime calcTime '
+    'enjoy calcTime calcTime '
+    'audio calcTime calcTime '
+    '.  .   . '
+    '.  .   . '
+    'switchingPics switchingPics switchingPics';
+}
+
+
+#containerContact {
+    display: grid;
+    grid-template-areas: 
+    'HeaderC HeaderC HeaderC'
+    'nav nav nav'
+    'titleCont titleCont titleCont'
+    'formDiv formDiv formDiv'
+    'formDiv formDiv formDiv'
+    'formDiv formDiv formDiv'
+    'formDiv formDiv formDiv'
+    'formDiv formDiv formDiv';
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    #containerContact {
+        display: grid;
+        text-align: center;
+        grid-template-areas: 'HeaderC'
+        'nav'
+        'titleCont'
+        'formDiv'
+        'formDiv'
+        'formDiv'
+        'formDiv'
+        'formDiv';
+    }
+
+    #containerHome {
+        display: grid;
+        text-align: center;
+        grid-template-areas: 'HeaderH'
+        'Nav'
+        'Welcome'
+        'enjoy'
+        'audio'
+        'calcTime'
+        'switchingPics';
+    }
+    
+}
+
+
+
+.img1 {
+    animation: fadeIn1 ease 10s;
+    animation: fadeIn1 2s infinite;
+  }
+.img2 {
+    animation: fadeIn2 ease 10s;
+    animation: fadeIn2 2s infinite;
+}
+
+@keyframes fadeIn1 {
+    33% {opacity:0;}
+    66% {opacity:0.5}
+    100% {opacity:1;}
+}
+
+@keyframes fadeIn2 {
+    33% {opacity:1;}
+    66% {opacity:0.5;}
+    100% {opacity:0;}
+}
