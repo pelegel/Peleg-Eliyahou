@@ -200,34 +200,42 @@ li {
         'switchingPics';
     }
     
+    #audio {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
  /*end grids*/
 
 
 
 /*animation*/
-.img1 {
-    animation: fadeIn1 ease 10s;
-    animation: fadeIn1 2s infinite;
+#img1 {
+    animation: fadeIn1 4s ease-in-out 0.5s infinite;
   }
-.img2 {
-    animation: fadeIn2 ease 10s;
-    animation: fadeIn2 2s infinite;
+#img2 {
+    animation: fadeIn2 4s ease-in-out 0.5s infinite;
+}
+
+.switching{
+    grid-area: switchingPics;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes fadeIn1 {
-    33% {opacity:0;}
-    66% {opacity:0.5}
-    100% {opacity:1;}
+    0% {opacity:0;}
+    33% {opacity:0.5}
+    66% {opacity:1;}
 }
 
 @keyframes fadeIn2 {
-    33% {opacity:1;}
-    66% {opacity:0.5;}
-    100% {opacity:0;}
+    0% {opacity:1;}
+    33% {opacity:0.5;}
+    66% {opacity:0;}
 }
 
-#pic {
-    animation: switchingImages 4s ease-in-out 0.5s 5;
-}
+
  /*end animation*/

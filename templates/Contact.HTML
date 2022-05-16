@@ -36,13 +36,14 @@
 
         <!-- Contact form -->
         <div id="formDiv">
-            <form action="URL" method="post">
+            <form name="contactForm" action="URL" method="post" onsubmit="submitForm(); return false;">
+
                 <!-- name -->
-                <label for="FullName">Full Name</label>
+                <label for="FullName">* Full Name</label>
                 <input type="text" id="FullName" name="FullName" autocomplete="on" required><br><br>
 
                 <!-- email -->
-                <label for="email">Email</label>
+                <label for="email">* Email</label>
                 <input type="email" id="email" name="email" required><br><br>       
 
                 <!-- phone number -->
@@ -65,19 +66,25 @@
                 <input type="range" id="range" name="range" min="0" max="10"><br><br>
 
                 <!-- message -->
-                <label for="text">What do you want to tell us?</label>
+                <label for="text">* What do you want to tell us?</label>
                 <input type="text" id="text" name="text" style="padding: 25px;" required><br><br>
 
                 <!-- agree to promotions -->
                 <label for="agree">I agree to send me promotion emails</label>
                 <input type="checkbox" id="agree" name="agree"><br><br>
 
+
+                <!-- submit form button -->
+                <input type="submit" id="btnSubmit" name="submit" value="Submit" /><br><br>
+
+                <p>* Mandatory fields</p>
+
+
+
             </form><br>
-
-            <!-- submit form button -->
-            <button id="btnSubmit" onclick="submit()">Submit</button><br>
-
         </div>
+
+
 
     </div>
 </body>
