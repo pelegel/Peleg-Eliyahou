@@ -1,17 +1,20 @@
 :root {
-    --lightPurple:  rgb(160, 6, 237);
-    --fucciaPink: rgb(255, 4, 129);
+    --lightPink:  rgb(247,202,201);
+    --fucciaPink: rgb(216, 60, 101);
 }
+
+
+
 /*web font*/
 @font-face {
     font-family: MyFirstFont;
-    src: url(../static/GrapeNuts-Regular.ttf);
+    src: url(../static/Raleway-VariableFont_wght.ttf);
 }
 
 body {
-    background-image: url("../static/background.jfif");
+    background-color: var(--lightPink);
     font-family: MyFirstFont;
-    margin: 50px;
+    min-width: 600px;
 }
 
 label {
@@ -25,13 +28,32 @@ label {
     font-weight: bold;
 }
 
+.topHeader {
+    grid-area: TopHeader;
+    width: 100%;
+    display: block;
+    margin: 0px;
+
+}
+.banner-image {
+    width: 100%;
+    display: block;
+    margin: 0px;
+    opacity: 90%;
+}
+
+
 
 /* navigation bar design*/
+.nav {
+    background-color: var(--fucciaPink);
+    overflow: hidden;
+}
+
+
 nav a {
-    color:blue;
     display: inline;
     font-size: 20px;
-    border: 3px solid lightsteelblue;
 }
 
 a:link {
@@ -40,13 +62,13 @@ a:link {
 
 
 a:hover {
-    color: var(--fucciaPink);
+    color: rgb(147, 178, 255);
     transform: scale(2,2);
 }
 
 .active {
-    background-color: lightsteelblue;
-    color: black;
+
+    color: var(--lightPink);
 }
 
 li {
@@ -64,26 +86,23 @@ li {
 }
 
 #HeaderH {
-    border: 7px solid lightsteelblue; 
-    padding: 15px; 
-    margin: 20px; 
+
     text-align: center; 
-    background-image: url('../static/pinkBackground.webp');
     grid-area: HeaderH;
+    color: var(--fucciaPink);
 }
 
 #audio {
     grid-area: audio;
+    margin: 20px;
 }
 
 #enjoy {
     grid-area: enjoy;
-    margin: 20px;
 }
 
 #calcTime {
     grid-area: calcTime;
-    margin: 20px;
     display: inline-block;
     white-space: nowrap;
 }
@@ -100,9 +119,9 @@ li {
 
 #Welcome {
     grid-area: Welcome;
-    margin: 20px; 
     font-size: 150%;
     font-weight: bold;
+
 }
  /*end grid areas - home*/
 
@@ -118,22 +137,19 @@ li {
 #formDiv {
     color: black;
     grid-area: formDiv;
-    margin: 20px;
 }
 
 
 #HeaderC {
-    border: 7px solid lightsteelblue; 
-    padding: 15px; 
-    margin: 20px; 
     text-align: center; 
-    background-image: url('../static/pinkBackground.webp');
     grid-area: HeaderC;
+    color: var(--fucciaPink);
 }
 
 
 #titleCont {
     grid-area: titleCont;
+
 }
  /*end grid areas - contact*/
 
@@ -146,9 +162,11 @@ li {
 /*Grids*/
 #containerHome {
     display: grid;
+    margin:50px;
     grid-template-areas: 
+    'TopHeader TopHeader TopHeader'
+    'Nav Nav Nav'
     'HeaderH HeaderH HeaderH '
-    'Nav Nav Nav '
     'Welcome calcTime calcTime '
     'enjoy calcTime calcTime '
     'audio calcTime calcTime '
@@ -160,9 +178,11 @@ li {
 
 #containerContact {
     display: grid;
+    margin:50px;
     grid-template-areas: 
-    'HeaderC HeaderC HeaderC'
+    'TopHeader TopHeader TopHeader'
     'nav nav nav'
+    'HeaderC HeaderC HeaderC'
     'titleCont titleCont titleCont'
     'formDiv formDiv formDiv'
     'formDiv formDiv formDiv'
@@ -178,26 +198,32 @@ li {
     #containerContact {
         display: grid;
         text-align: center;
-        grid-template-areas: 'HeaderC'
+        grid-template-areas: 
+        'TopHeader'
         'nav'
+        'HeaderC'
         'titleCont'
         'formDiv'
         'formDiv'
         'formDiv'
         'formDiv'
         'formDiv';
+
     }
 
     #containerHome {
         display: grid;
         text-align: center;
-        grid-template-areas: 'HeaderH'
+        grid-template-areas: 
+        'TopHeader'
         'Nav'
+        'HeaderH'
         'Welcome'
         'enjoy'
         'audio'
         'calcTime'
         'switchingPics';
+        font-size: 12px;
     }
     
     #audio {
@@ -205,9 +231,19 @@ li {
         margin-left: auto;
         margin-right: auto;
     }
-}
- /*end grids*/
 
+    .nav {
+        text-align: center;
+    }
+    
+    .title {
+        font-size: 13px;
+    }
+}
+
+
+
+ /*end grids*/
 
 
 /*animation*/
@@ -217,12 +253,18 @@ li {
 #img2 {
     animation: fadeIn2 4s ease-in-out 0.5s infinite;
 }
+.banner-image{
+    animation: headerFading 4s ease-in-out 0.5s 3   ;
+
+}
 
 .switching{
     grid-area: switchingPics;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border:5px double rgb(216, 60, 101);
+
 }
 
 @keyframes fadeIn1 {
@@ -235,6 +277,12 @@ li {
     0% {opacity:1;}
     33% {opacity:0.5;}
     66% {opacity:0;}
+}
+
+@keyframes headerFading {
+    0% {opacity:1;}
+    33% {opacity:0.7;}
+    66% {opacity:0.4;}
 }
 
 
